@@ -32,10 +32,10 @@ auth.onAuthStateChanged((user) => {
         localStorage.removeItem('userEmail');
         
         // Redirect to login if on protected page
-        const publicPages = ['login.html', ''];
+        const publicPages = ['index.html', ''];
         const currentPage = window.location.pathname.split('/').pop();
         if (!publicPages.includes(currentPage)) {
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
     }
 });
